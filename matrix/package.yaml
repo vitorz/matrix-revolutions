@@ -1,0 +1,34 @@
+name:                matrix
+version:             0.1.0.0
+github:              ""
+license:             BSD3
+author:              "Vitor Graziano"
+copyright:           "2022 Vitor Graziano"
+
+extra-source-files:
+- README.md
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- containers
+- mtl
+- text
+- scotty
+- http-types
+
+default-extensions:
+  - DeriveGeneric
+  - DerivingStrategies
+  - GeneralizedNewtypeDeriving
+  - OverloadedStrings
+
+executables:
+  matrix-exe:
+    main:                Main.hs
+    source-dirs:         src
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
